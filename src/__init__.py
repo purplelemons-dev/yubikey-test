@@ -18,7 +18,7 @@ class YubiKeyTest:
 
     def split_input(self):
         self.otp = self.input[-32:]
-        self.identity = self.input[:-32]
+        self.identity = self.input[: -len(self.otp)]
         return self.identity, self.otp
 
     @staticmethod
